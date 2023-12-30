@@ -1,0 +1,54 @@
+/* Contact.css */
+.wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form input[type="submit"] {
+  background-color: #646cff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #535bf2;
+}
+
+.contact-response {
+  color: #28a745; /* Success color */
+  font-size: 1.2em;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-response.error {
+  color: #dc3545; /* Error color */
+}
+
+.highlighted-email {
+  color: #007bff; 
+  font-weight: bold; 
+}

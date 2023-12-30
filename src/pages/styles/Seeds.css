@@ -1,0 +1,14 @@
+/* Seeds.css */
+.wrap {
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Spacing between cards */
+  padding-bottom: 2rem;
+}
+
+/* Additional styling as needed */

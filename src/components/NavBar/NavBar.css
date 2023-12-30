@@ -1,0 +1,80 @@
+/* styles/Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 1rem 3rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0; /* Remove any default margin */
+}
+
+.logo img {
+  width: 200px;
+}
+
+.nav-links,
+.nav-links-mobile {
+  list-style: none;
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links li,
+.nav-links-mobile li {
+  padding: 0.5rem 1rem; /* Adjust padding for alignment */
+  text-align: center; /* Center text */
+  font-size: 1.2em;
+}
+
+.nav-links-mobile {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  z-index: 1; /* Ensure it's above other content */
+}
+
+.mobile-menu-icon {
+  display: none;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .logo img {
+    width: 150px; /* Smaller size for mobile screens */
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links-mobile {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .navbar .nav-links-mobile {
+    display: flex;
+  }
+
+  .nav-links li,
+  .nav-links-mobile li {
+    font-size: 1em;
+  }
+}

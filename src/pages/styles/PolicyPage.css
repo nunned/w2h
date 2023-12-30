@@ -1,0 +1,45 @@
+/* PolicyPage.css */
+.policy-content {
+  color: rgba(255, 255, 255, 0.87); /* Adjust color as needed */
+  background-color: #242424; /* Background color */
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto; /* Center the content */
+}
+
+.policy-content h1 {
+  font-size: 2.5em; /* Adjust heading size */
+  margin-bottom: 20px; /* Spacing after the heading */
+}
+
+.policy-content h2 {
+  font-size: 2em;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.policy-content p {
+  font-size: 1em; /* Paragraph font size */
+  line-height: 1.6; /* Line height for better readability */
+  margin-bottom: 10px; /* Spacing between paragraphs */
+}
+
+.policy-content strong {
+  font-weight: bold; /* Bold for emphasis */
+}
+
+.policy-content a {
+  color: #646cff; /* Link color */
+  text-decoration: none; /* No underline */
+}
+
+.policy-content a:hover {
+  color: #535bf2; /* Hover color for links */
+}
+
+@media screen and (max-width: 768px) {
+  .navbar,
+  .policy-content {
+    padding: 10px; /* Reduced padding for mobile */
+  }
+}

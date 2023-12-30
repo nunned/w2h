@@ -1,0 +1,40 @@
+.homepage-wrap {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: 80%;
+}
+
+.hero-section {
+  width: 100vw; /* Full width of the viewport */
+  overflow: hidden; /* Hide any horizontal overflow */
+}
+
+.hero-image {
+  width: 100%; /* Full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Display as a block element */
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 80%; /* Adjust the maximum width */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.image-grid img {
+  width: 100%; /* Images take full width of their column */
+  height: auto; /* Maintain the aspect ratio of the images */
+}
+
+@media screen and (max-width: 768px) {
+  .image-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    max-width: 100%; /* Full width on mobile */
+    padding: 10px; /* Adjust padding for mobile */
+  }
+}
