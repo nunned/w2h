@@ -1,5 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import AgeVerification from "./components/AgeVerification/AgeVerification";
 import Navbar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import HomePage from "./pages/HomePage";
@@ -11,8 +13,23 @@ import ReturnRefundPolicy from "./pages/ReturnRefundPolicy";
 import Contact from "./pages/Contact";
 
 function App() {
+  const [ageConfirmed, setAgeConfirmed] = useState(false);
+
+  useEffect(() => {
+    const isAgeConfirmed = localStorage.getItem("ageConfirmed");
+    if (isAgeConfirmed) {
+      setAgeConfirmed(true);
+    }
+  }, []);
+
+  const handleAgeConfirm = () => {
+    localStorage.setItem("ageConfirmed", "true");
+    setAgeConfirmed(true);
+  };
+
   return (
     <BrowserRouter>
+      {!ageConfirmed && <AgeVerification onConfirm={handleAgeConfirm} />}
       <MainApp />
     </BrowserRouter>
   );
@@ -21,7 +38,7 @@ function App() {
 function MainApp() {
   return (
     <div>
-    <Navbar />
+      <Navbar />
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="/home" element={<HomePage />} />

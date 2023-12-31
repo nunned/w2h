@@ -1,0 +1,81 @@
+/* AgeVerification.css */
+.age-verification {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1000;
+  background-image: url("../../assets/age-bg.jpg");
+}
+
+/* bg-blur */
+.age-verification::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  backdrop-filter: blur(5px); /* Blur effect */
+  z-index: -1; /* Ensure it's behind the content */
+}
+
+.age-verification-logo {
+  max-width: 200px; /* Set a max-width for the logo */
+  margin-bottom: 20px; /* Space between the logo and the text */
+}
+
+.age-verification h2,
+.age-verification p {
+  color: white; /* Adjust the color to make the text visible on your background */
+}
+
+.button-container {
+  display: flex; /* Align children (buttons) in a row */
+  justify-content: center; /* Center buttons horizontally */
+  align-items: center; /* Center buttons vertically */
+  gap: 20px; /* Space between buttons */
+}
+
+.age-verification button {
+  display: flex;
+  padding: 25px 50px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 650;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #4550bb;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .age-verification h2,
+  .age-verification p {
+    font-size: 1em; /* Adjust text size for mobile */
+  }
+
+  .age-verification button {
+    padding: 15px 30px; /* Smaller buttons for mobile */
+    font-size: 1em; /* Smaller font size for text in buttons */
+  }
+
+  .button-container {
+    flex-direction: row; /* Stack buttons vertically on mobile */
+  }
+
+  .age-verification-logo {
+    max-width: 150px; /* Smaller logo for mobile */
+  }
+}
